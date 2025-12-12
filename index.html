@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Thầy.AI</title>
+  <meta name="description" content="Đồng hành tâm linh với AI - Thầy.AI mang trí tuệ Thích Nhất Hạnh đến với bạn qua công nghệ">
+  <meta name="keywords" content="thiền, mindfulness, Thích Nhất Hạnh, meditation, mental health, AI, Vietnam">
+  <meta name="theme-color" content="#f97316">
+  
+  <!-- Optimization Hints -->
+  <link rel="preconnect" href="https://aistudiocdn.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://esm.sh">
+
+  <!-- PWA & Mobile -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Thầy.AI">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thầy.AI - Quantum Zen Companion">
+  <meta property="og:description" content="Đồng hành tâm linh với AI inspired by Thích Nhất Hạnh">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.8);
+      --ease-in: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-out: cubic-bezier(0.4, 0, 1, 1);
+    }
+    body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+    .font-serif { font-family: 'Noto Serif', serif; }
+    
+    /* Utility Animations from Design Kit */
+    @keyframes pulse-ring {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    .animate-pulse-ring {
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(-10px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Scrollbar hiding */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Custom Scrollbar for history */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d6d3d1;
+      border-radius: 4px;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+    "scheduler": "https://aistudiocdn.com/scheduler@^0.23.2",
+    "scheduler/": "https://aistudiocdn.com/scheduler@^0.23.2/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.559.0",
+    "three": "https://aistudiocdn.com/three@^0.170.0",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.0.0-rc.3",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^9.120.0",
+    "tone": "https://aistudiocdn.com/tone@^14.7.77",
+    "zustand": "https://esm.sh/zustand@^5.0.3?external=react",
+    "vite": "https://esm.sh/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "onnxruntime-web": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.1/dist/ort.es6.min.js"
+  }
+}
+</script>
+</head>
+<body class="bg-stone-50 text-stone-900 h-screen w-screen overflow-hidden">
+  <div id="root" class="h-full w-full"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(reg => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker failed', err));
+      });
+    }
+  </script>
+</body>
+</html>
